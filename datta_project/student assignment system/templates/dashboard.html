@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Welcome {{ name }}</h2>
+
+<h3>Available Assignments</h3>
+
+{% for a in assignments %}
+
+<p>
+    {{ a[1] }} - {{ a[2] }}
+
+    <a href="/submit">Submit</a>
+</p>
+
+{% endfor %}
+
+<a href="/add_assignment">
+    <button>Add Assignment</button>
+</a>
+
+<a href="/logout">Logout</a>
+
+</body>
+</html>
